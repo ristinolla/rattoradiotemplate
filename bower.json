@@ -1,0 +1,23 @@
+{
+  "name": "rattoradio",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ristinolla/rattoradiotemplate",
+  "authors": [
+    "ristinolla <hello@pertturistimella.com>"
+  ],
+  "description": "Just a template for Rattoradio",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "fontawesome": "4.*",
+    "jquery-cycle2": "*"
+  }
+}

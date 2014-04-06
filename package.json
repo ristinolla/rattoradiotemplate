@@ -1,14 +1,18 @@
 {
-  "name": "Rattoradio",
-  "version": "0.1.0",
+  "name": "rattoradio",
+  "version": "0.3.0",
+  "author": "Ristinolla <hei@pertturistimella.com>",
+  "description": "Just a template for Rattoradio site 2014",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/ristinolla/rattoradiotemplate.git"
+  }, 
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-uglify": "~0.2.2"
   }, 
-  "components" :{
-  	"FortAwesome/Font-Awesome": "*"
-  }
+  "license": "MIT"
 
 }
