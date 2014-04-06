@@ -1,4 +1,4 @@
 rattoradiotemplate
 ==================
 
-rattoradio front-end template
+Just a Front-end template for Rattoradio.fi
