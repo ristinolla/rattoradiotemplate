@@ -1355,14 +1355,74 @@ body,
 html {
   padding: 0;
   margin: 0;
+  background-color: #0072bc;
+  color: white;
 }
-body {
-  margin-top: 50px;
+body a,
+html a {
+  color: white;
 }
+body a:hover,
+html a:hover {
+  color: #89d1ff;
+}
+/**
+
+LAYOUT
+
+**/
 .wide-container {
   width: 100%;
   padding: 0;
+  margin: 0;
+  border-bottom: 20px solid rgba(0, 0, 0, 0.25);
 }
+.content-row {
+  padding: 40px 0;
+}
+div[class*="col-"] img {
+  max-width: 100%;
+  height: auto;
+}
+/**
+
+NAV BAR
+
+**/
+.navbar {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.navbar a {
+  color: white;
+}
+.navbar .open a,
+.navbar a:hover {
+  color: #333;
+}
+.navbar .navbar-center {
+  margin: 0 auto;
+  display: table;
+  float: none;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+}
+/**
+
+JUMBOTRON
+
+**/
 .big-logo {
   font: 0/0 a;
   color: transparent;
@@ -1380,7 +1440,35 @@ body {
   background-color: #0072bc;
 }
 .jumbotron {
+  padding-top: 50px;
+  color: white;
   background-color: #0072bc;
   background-size: cover;
   background-repeat: no-repeat;
+}
+/**
+
+ei jaksa enaa olla jarjestelmallinen
+
+**/
+.box {
+  background: white;
+  color: #0072bc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* Featurettes
+------------------------- */
+.marketing {
+  padding: 30px 0;
+}
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }
