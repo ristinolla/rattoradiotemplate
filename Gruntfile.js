@@ -17,6 +17,29 @@ module.exports = function(grunt) {
       }
     },
 
+    less: {
+      development: {
+        files: {
+          "build/css/<%= pkg.name %>.css": "src/less/main.less"
+        }
+      }
+      /*
+      production: {
+        options: {
+          paths: ["assets/css"],
+          cleancss: true,
+          modifyVars: {
+            imgPath: '"http://mycdn.com/path/to/images"',
+          bgColor: 'red'
+          }
+        },
+        files: {
+          "path/to/result.css": "path/to/source.less"
+        }
+      }
+      */
+    },
+
     uglify: {
       options: {
        // banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -51,6 +74,24 @@ module.exports = function(grunt) {
         }
 
       } 
+    },
+
+    watch: {
+      styles: {
+        // Which files to watch (all .less files recursively in the less directory)
+        files: ['src/less/**/*.less'],
+        tasks: ['less'],
+        options: {
+          nospawn: true
+        }
+      },
+      scripts: {
+        files: ['src/js/*.js'],
+        tasks: ['concat', 'uglify'],
+        options: {
+          spawn: false,
+        },
+      },
     }
 
 
@@ -59,10 +100,13 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
 
   // Default task(s).
-  grunt.registerTask('default', ['concat','uglify','jade']);
+  grunt.registerTask('default', ['concat','uglify','jade','watch']);
 
 };
