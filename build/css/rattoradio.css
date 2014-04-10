@@ -1357,6 +1357,7 @@ html {
   margin: 0;
   background-color: #272e38;
   color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
 }
 body a,
 html a {
@@ -1365,6 +1366,13 @@ html a {
 body a:hover,
 html a:hover {
   color: #89d1ff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "museo-slab", sans-serif;
 }
 body > .footer-push {
   min-height: 100%;
@@ -1468,6 +1476,49 @@ NAV BAR
 }
 /**
 
+BUTTONEEEITa
+
+**/
+.btn {
+  border: none;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn + .btn {
+  margin-left: 10px;
+}
+/* Button 2 */
+.btn-animated {
+  background: #acd037;
+  color: #343434;
+  box-shadow: 0 6px #8dac28;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 5px;
+}
+.btn-animated:hover {
+  box-shadow: 0 4px #8dac28;
+  top: 2px;
+  color: #343434;
+}
+.btn-animated:active {
+  box-shadow: 0 0 #8dac28;
+  top: 6px;
+  color: #343434;
+}
+/**
+
 JUMBOTRON
 
 **/
@@ -1505,6 +1556,63 @@ ei jaksa enaa olla jarjestelmallinen
   color: #272e38;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.box h2 {
+  text-align: center;
+  font-weight: 700;
+}
+.box a,
+.box a:hover,
+.box a:active,
+.box a:visited {
+  color: #343434;
+}
+.box-list a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #fafafa;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.box-list a:hover {
+  background-image: -webkit-linear-gradient(left, #ffffff, #fafafa 50%, #ffffff);
+  background-image: linear-gradient(to right, #ffffff, #fafafa 50%, #ffffff);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=1);
+}
+.box-list .fa {
+  position: absolute;
+  right: 10px;
+  width: 26px;
+  text-align: center;
+  font-size: 24px;
+  color: #0072bc;
+}
+.time-list a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+.time-list a time {
+  font-weight: 700;
+  margin-right: 10px;
+  width: 30px;
+  background-image: -webkit-linear-gradient(left, color-stop(#225cec 0%), color-stop(#00fff1 100%));
+  background-image: linear-gradient(to right, #225cec 0%, #00fff1 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff225cec', endColorstr='#ff00fff1', GradientType=1);
+  text-align: center;
+  padding: 10px 10px;
+  color: white;
+}
 /* Featurettes
 ------------------------- */
 .marketing {
@@ -1522,6 +1630,29 @@ ei jaksa enaa olla jarjestelmallinen
 }
 /* Carousel
 ------------------------- */
+#vertical-sponsors {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  height: 487px;
+  overflow: hidden;
+  background: #FFF;
+}
+.horizontal-sponsors li {
+  width: 20%;
+  padding: 0;
+  margin: 0;
+}
+.horizontal-sponsors a {
+  display: block;
+  height: auto;
+}
+/* News
+----*/
+dt {
+  color: #acd037;
+  font-size: 16px;
+}
 /* Footer
 ------------------------- */
 .site-footer {

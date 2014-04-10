@@ -1,0 +1,64 @@
+.container
+  .row.featurette
+      .col-sm-6.col-md-4
+        h2 Tämän päivän ohjelmisto
+        ul.list-unstyled.time-list
+          li
+            a(href="#")
+              time 08:00
+              span Laadukasta paskaa ja kauheasti tekstiä tähän
+          li
+            a(href="#")
+              time 08:00
+              span Laadukasta paskaa                
+          li
+            a(href="#")
+              time 08:00
+              span Laadukasta paskaa
+          li
+            a(href="#")
+              time 08:00
+              span Laadukasta paskaa
+          li
+            a(href="#")
+              time 08:00
+              span Laadukasta paskaa
+          li
+            a(href="#")
+              time 08:00
+              span Laadukasta paskaa
+
+      .col-sm-6.col-md-4.box
+        h2 Yhteys studioon!
+        ul.box-list.list-unstyled
+          li
+            a(href="#") Shoutbox
+              i.fa.fa-bullhorn.pull-right 
+          li
+            a(href="#") Toivo biisiä
+              i.fa.fa-gift.pull-right
+          li
+            a(href="#") IRC  
+              strong rattoradio@irc.net
+              i.fa.fa-code.pull-right
+          li
+            a(href="#") Soita:  
+              strong 040 123 1234
+              i.fa.fa-mobile-phone.pull-right
+          li
+            a(href="#") Skype:  
+              strong rattoradioskype
+              i.fa.fa-skype.pull-right
+            
+
+      .col-sm-12.col-md-4
+        h2 Uutiset
+        .news-wrap
+          mixin uutinen()
+            dl
+              dt Rattoradio käynnistyy jipii!
+              dd usce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          +uutinen()
+          +uutinen()
+          +uutinen()
+          a(href="#").text-center Lisää uutisia..
