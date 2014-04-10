@@ -1,7 +1,7 @@
 {
   "name": "rattoradio",
   "version": "0.3.0",
-  "author": "Ristinolla <hei@pertturistimella.com>",
+  "author": "Ristinolla <hello@pertturistimella.com>",
   "description": "Just a template for Rattoradio site 2014",
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
     "grunt-contrib-jade": "~0.11.0",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-less": "~0.11.0",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "jade": "~1.3.1"
   },
   "license": "MIT"
 }

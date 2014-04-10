@@ -71,6 +71,7 @@ module.exports = function(grunt) {
         },
         files: {
           'build/index.html' : 'src/index.jade'
+
         }
 
       } 
@@ -92,6 +93,10 @@ module.exports = function(grunt) {
           spawn: false,
         },
       },
+      jade: {
+        files: 'src/**/*.jade',
+        tasks: ['jade:compile']
+      }    
     }
 
 
