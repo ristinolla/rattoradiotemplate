@@ -32,4 +32,13 @@ html(lang="en")
               i.fa.fa-volume-up
             a.btn.btn-lg.btn-primary(href="#", role="button") Katsele!
               i.fa.fa-video-camera
- 
+
+    div.container
+      .row
+        .col-xs-12
+          ul.list-inline.list-sponsors
+          mixin sponsors(sponsors)
+            -each sponsor in sponsors
+              li
+                a(href="#")= sponsor
+          +sponsors(["ferrari", "mclaren", "red bull", "lotus"]
