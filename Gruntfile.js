@@ -11,8 +11,8 @@ module.exports = function(grunt) {
       },
       scripts: {
         // the files to concatenate
-        src: ['src/js/hide_seek_nav.js', 'src/js/rattoradio.js'],
-        // the location of the resulting JS file
+        src: ['src/js/hide_seek_nav.js',
+        'src/js/rattoradio.js'],
         dest: 'build/js/<%= pkg.name %>.js'
       },
       libs: {

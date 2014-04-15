@@ -1781,7 +1781,7 @@ ei jaksa enaa olla jarjestelmallinen
 .time-list a {
   display: block;
   width: 100%;
-  padding: 5px 10px;
+  padding: 5px 0px;
   text-decoration: none;
   font-size: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1861,6 +1861,7 @@ ei jaksa enaa olla jarjestelmallinen
 .horizontal-sponsors {
   width: 100% ;
   display: none;
+  background-size: contain;
 }
 @media (min-width: 992px) {
   .horizontal-sponsors {
@@ -1885,6 +1886,11 @@ ei jaksa enaa olla jarjestelmallinen
   height: 100%;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .horizontal-sponsors .slide a {
+    background-size: contain;
+  }
+}
 @media (min-width: 768px) {
   .horizontal-sponsors .slide {
     height: 162px;
@@ -1903,6 +1909,7 @@ dt {
 /* Footer
 ------------------------- */
 .site-footer {
+  position: relative;
   background: #1f242c;
   min-height: 80px;
   margin-bottom: 0 !important;
@@ -1944,7 +1951,7 @@ dt {
   color: #272e38;
 }
 #back2top {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   right: 20px;
   color: #acd037;
@@ -1983,4 +1990,40 @@ dt {
 }
 .social-wrap h3 span {
   padding-left: 10px;
+}
+.panel-group a,
+.panel-group a:hover {
+  color: white;
+  text-decoration: none;
+}
+.panel-group .panel {
+  background: none;
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-group .panel .panel-heading {
+  border-radius: 0;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #0072bc;
+}
+.panel-group .panel .panel-heading.today {
+  background: #acd037;
+}
+.panel-group .panel .panel-body {
+  border: none;
+}
+.panel-group .panel-collapse {
+  border-radius: 0;
+  border: none;
+  background: #005389;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body {
+  border: none;
+}
+.ohjelmakartta {
+  font-size: 12px;
 }

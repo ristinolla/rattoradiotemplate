@@ -7,31 +7,7 @@ include variables
         include yhteys-box.jade
       .col-sm-6.col-md-5
         h2 Tämän päivän ohjelmisto
-        ul.list-unstyled.time-list
-          li
-            a(href="#")
-              time 00:00 - 00:80
-              span Laadukasta paskaa ja kauheasti tekstiä tähän
-          li
-            a(href="#")
-              time 08:00 - 11:00
-              span Laadukasta paskaa                
-          li
-            a(href="#")
-              time 11:00 - 12:00
-              span Laadukasta paskaa
-          li
-            a(href="#")
-              time 12:00 - 14:00
-              span Laadukasta paskaa
-          li
-            a(href="#")
-              time 14:00 - 17:00
-              span Laadukasta paskaa
-          li
-            a(href="#")
-              time 17:00 - 20:00
-              span Laadukasta paskaa  
+        +paivaohjelmat(paivaohjelma)
 
       .col-sm-12.col-md-4
         h2 Uutiset

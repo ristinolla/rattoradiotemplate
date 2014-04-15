@@ -16,9 +16,18 @@ html(lang="en")
       
       .container-divider
 
-
-      .container.main-content
+      .container.main-content.hidden-md.hidden-lg
         .row
+          .col-xs-12
+            h1 Ohjelmakartta
+            include includes/ohjelmakartta_mobiili.jade
+      
+      
+      .container.main-content.visible-md.visible-lg
+        .row
+          .col-xs-12
+            h1 Ohjelmakartta
+            include includes/ohjelmakartta_normaali.jade
 
 
     include includes/footer
