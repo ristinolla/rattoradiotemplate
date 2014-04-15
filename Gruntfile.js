@@ -9,18 +9,22 @@ module.exports = function(grunt) {
         // define a string to put between each file in the concatenated output
         separator: ';'
       },
-      dist: {
+      scripts: {
         // the files to concatenate
         src: ['src/js/hide_seek_nav.js', 'src/js/rattoradio.js'],
         // the location of the resulting JS file
         dest: 'build/js/<%= pkg.name %>.js'
+      },
+      libs: {
+        src: ['bower_components/jquery/dist/jquery.js', 'bower_components/jquery-cycle2/build/jquery.cycle2.js', 'bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js', 'bower_components/bootstrap/dist/js/bootstrap.js'],
+        dest: 'build/js/<%= pkg.name %>.libs.js'
       }
     },
 
     less: {
       development: {
         files: {
-          "build/css/<%= pkg.name %>.css": "src/less/main.less"
+          "build/css/<%= pkg.name %>.css": "src/less/main.less",
         }
       }
       /*
@@ -46,7 +50,8 @@ module.exports = function(grunt) {
       },
         dist: {
           files: {
-            'build/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+            'build/js/<%= pkg.name %>.min.js': ['<%= concat.scripts.dest %>'],
+            'build/js/<%= pkg.name %>.libs.js': ['<%= concat.libs.dest %>']
           }
         }
     },

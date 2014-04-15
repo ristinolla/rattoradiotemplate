@@ -37,7 +37,10 @@ html(lang="en")
       .container-divider
   
       div.wide-container
-        ul.list-inline.horizontal-sponsors(data-amount="5")
+        div.list-inline.horizontal-sponsors(
+            data-cycle-fx=carousel,
+            data-cycle-timeout=1000
+            )
           +sponsors(["arkkarit", "uniresta", "jumpru", "tek", "oyy"])
 
       

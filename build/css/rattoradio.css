@@ -1555,6 +1555,7 @@ ei jaksa enaa olla jarjestelmallinen
   background: white;
   color: #272e38;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 5px;
 }
 .box h2 {
   text-align: center;
@@ -1576,14 +1577,15 @@ ei jaksa enaa olla jarjestelmallinen
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .box-list a:hover {
   background-image: -webkit-linear-gradient(left, #ffffff, #fafafa 50%, #ffffff);
   background-image: linear-gradient(to right, #ffffff, #fafafa 50%, #ffffff);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=1);
+  background: #acd037;
 }
 .box-list .fa {
   position: absolute;
@@ -1638,13 +1640,14 @@ ei jaksa enaa olla jarjestelmallinen
   overflow: hidden;
   background: #FFF;
 }
-.horizontal-sponsors li {
+.horizontal-sponsors > div {
+  display: inline-block;
   width: 20%;
   padding: 0;
   margin: 0;
 }
 .horizontal-sponsors a {
-  display: block;
+  display: inline-block;
   height: auto;
 }
 /* News
