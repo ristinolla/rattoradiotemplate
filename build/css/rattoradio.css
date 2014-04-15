@@ -1420,7 +1420,12 @@ NAV BAR
 
 **/
 .navbar {
-  background: rgba(0, 0, 0, 0);
+  background-color: #272e38;
+}
+@media (min-width: 768px) {
+  .navbar {
+    background: rgba(0, 0, 0, 0.4);
+  }
 }
 .navbar a {
   color: white;
@@ -1429,10 +1434,15 @@ NAV BAR
 .navbar a:hover {
   color: #333;
 }
-.navbar .navbar-center {
-  margin: 0 auto;
-  display: table;
-  float: none;
+.navbar .navbar-toggle span {
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .navbar .navbar-center {
+    margin: 0 auto;
+    display: table;
+    float: none;
+  }
 }
 .navbar.down {
   opacity: 1;
@@ -1462,6 +1472,20 @@ NAV BAR
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
+.navbar .dropdown-menu {
+  background: #2d3541;
+  color: white;
+}
+.navbar .dropdown-menu a {
+  color: white;
+}
+.navbar .dropdown-menu a:hover {
+  color: white;
+  background-color: #384250;
+}
+.navbar .dropdown-menu .divider {
+  background-color: #384250;
+}
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
@@ -1473,6 +1497,9 @@ NAV BAR
 .nav .open > a:focus {
   background-color: rgba(0, 0, 0, 0.5);
   color: #FFF;
+}
+.navbar-collapse.collapse.in {
+  background: #272e38;
 }
 /**
 
@@ -1596,24 +1623,17 @@ ei jaksa enaa olla jarjestelmallinen
   color: #0072bc;
 }
 .time-list a {
-  display: inline-block;
+  display: block;
   width: 100%;
   padding: 10px 0px;
-  margin-bottom: 10px;
   text-decoration: none;
   font-size: 16px;
 }
 .time-list a time {
+  display: block;
   font-weight: 700;
-  margin-right: 10px;
-  width: 30px;
-  background-image: -webkit-linear-gradient(left, color-stop(#225cec 0%), color-stop(#00fff1 100%));
-  background-image: linear-gradient(to right, #225cec 0%, #00fff1 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff225cec', endColorstr='#ff00fff1', GradientType=1);
-  text-align: center;
-  padding: 10px 10px;
-  color: white;
+  text-align: left;
+  color: #0072bc;
 }
 /* Featurettes
 ------------------------- */

@@ -11,7 +11,7 @@ html(lang="en")
           a(href="#")
             img(src="http://placehold.it/162x162/"+sponsor+"/abbeef/", alt="")
     div.footer-pushssssss
-      include includes/main_nav.jade
+      include includes/main-nav.jade
       // jumbotron
       div.wide-container.jumbotron-wrap
         .container
@@ -36,13 +36,13 @@ html(lang="en")
             +sponsors(["ffaaff", "afbafa", "bbaaddd", "aebbaa", "abbabb"])
       .container-divider
   
-      div.wide-container
+      // div.wide-container
         div.list-inline.horizontal-sponsors(
             data-cycle-fx=carousel,
             data-cycle-timeout=1000
             )
           +sponsors(["arkkarit", "uniresta", "jumpru", "tek", "oyy"])
-
+      //     
       
       include includes/main-container
     

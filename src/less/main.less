@@ -83,8 +83,13 @@ NAV BAR
 **/
 
 
+
+
 .navbar {
-	background: rgba(0, 0, 0, 0);
+	background-color: @darkBlue;
+	@media (min-width:@sm) {
+		background: rgba(0, 0, 0,0.4)
+	}
 	//background: @darkBlue;
 	//border-bottom: 1px solid #fafafa;
 	//.box-shadow(0 0 20px rgba(0,0,0,0.2));
@@ -96,10 +101,16 @@ NAV BAR
 	.open a, a:hover {
 		color: #333;
 	}
+	.navbar-toggle span {
+		background-color: white;
+	}
 	.navbar-center {
-		margin: 0 auto;
-		display: table;
-		float: none;
+		@media (min-width:@sm) {
+			margin: 0 auto;
+			display: table;
+			float: none;
+		}
+		
 	}
 	&.down {
 		opacity: 1;
@@ -115,6 +126,20 @@ NAV BAR
 		.transition(color .3s);
 		.transition(opacity .3s);
 	}
+	.dropdown-menu {
+		background: lighten(@darkBlue, 3%);
+		color: white;
+		a {
+		  color: white;
+		  &:hover {
+		  	color: white;
+		  	background-color: lighten(@darkBlue, 8%);
+		  }
+		}
+		.divider {
+			background-color: lighten(@darkBlue, 8%);
+		}
+	}
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
@@ -125,6 +150,10 @@ NAV BAR
 .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
 	background-color: rgba(0, 0, 0, 0.5);
 	color: #FFF;
+}
+
+.navbar-collapse.collapse.in {
+	background: @darkBlue;
 }
 
 
@@ -265,20 +294,17 @@ ei jaksa enaa olla jarjestelmallinen
 
 .time-list {
 	a {
-		display: inline-block;
+		display: block;
 		width: 100%;
 		padding: 10px 0px;
-		margin-bottom: 10px;
 		text-decoration: none;
 		font-size: 16px;
 		time {
+			display: block;
 			font-weight: 700;
-			margin-right: 10px;
-			width: 30px;
-			.rattoGradient;
-			text-align: center;
-			padding: 10px 10px;
-			color: white;
+			text-align: left;
+			//.rattoGradient;
+			color: @rattoBlue;
 		}
 	}
 }

@@ -75,8 +75,10 @@ module.exports = function(grunt) {
           pluginVersion: '<%= pkg.version %>'
         },
         files: {
-          'build/index.html' : 'src/index.jade'
-
+          'build/index.html' : 'src/index.jade',
+          'build/components/head.html' :  'src/includes/head.jade',
+          'build/components/main-container.html' : 'src/includes/main-container.jade',
+          'build/components/main-nav.html' : 'src/includes/main-nav.jade'
         }
 
       } 
