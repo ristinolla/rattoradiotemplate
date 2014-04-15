@@ -1356,6 +1356,7 @@ html {
   padding: 0;
   margin: 0;
   background-color: #272e38;
+  background: url("../img/background.jpg");
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
 }
@@ -1372,12 +1373,25 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "museo-slab", sans-serif;
+  font-family: "Open Sans", "museo-slab", sans-serif;
+  font-weight: 700;
 }
 body > .footer-push {
   min-height: 100%;
   height: auto !important;
   margin-bottom: -80px;
+}
+a:hover .twitter-color {
+  color: #00aced;
+}
+a:hover .fb-color {
+  color: #3b5998;
+}
+a:hover .insta-color {
+  color: #517fa4;
+}
+a:hover .irc-color {
+  color: red;
 }
 /**
 
@@ -1392,10 +1406,10 @@ LAYOUT
 .container-divider {
   height: 4px;
   width: 100%;
-  background-image: -webkit-linear-gradient(left, color-stop(#225cec 0%), color-stop(#00fff1 100%));
-  background-image: linear-gradient(to right, #225cec 0%, #00fff1 100%);
+  background-image: -webkit-linear-gradient(left, color-stop(#7fddd9 0%), color-stop(#3994ea 100%));
+  background-image: linear-gradient(to right, #7fddd9 0%, #3994ea 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff225cec', endColorstr='#ff00fff1', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7fddd9', endColorstr='#ff3994ea', GradientType=1);
   border-top: 0;
   margin-top: 0;
 }
@@ -1406,6 +1420,18 @@ LAYOUT
   100% {
     background-position: right bottom;
   }
+}
+@media (min-width: 768px) {
+  .container {
+    margin-bottom: 0px;
+  }
+}
+.site-footer > .container {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.container.main-content {
+  margin-top: 40px;
 }
 .content-row {
   padding: 40px 0;
@@ -1502,6 +1528,28 @@ NAV BAR
   background: #272e38;
 }
 /**
+ **
+ List- nav
+
+ */
+h3.list-head {
+  color: #acd037;
+}
+ul.list-nav li:first-of-type a {
+  border: none;
+}
+ul.list-nav li a {
+  display: block;
+  padding: 5px 15px;
+  border-color: gray;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+ul.list-nav li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+/**
 
 BUTTONEEEITa
 
@@ -1556,14 +1604,30 @@ JUMBOTRON
   background-color: transparent;
   border: 0;
   color: rgba(0, 0, 0, 0) !important;
-  width: 300px;
-  height: 227px;
+  width: 531px;
+  height: 226px;
   display: block;
-  background-image: url("../img/rattoradio-white.png");
+  background-image: url("../img/rattoradiomedtaajuus_iso.png");
   background-repeat: no-repeat;
+}
+.small-logo {
+  display: inline-block;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  height: 100px;
+  width: 219px;
+  color: rgba(0, 0, 0, 0) !important;
+  background-image: url("../img/rattoradiomedtaajuus.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .jumbotron-wrap {
   background-color: #0072bc;
+  background: url("../img/hero-bg.jpg");
+  background-size: cover;
 }
 .jumbotron {
   padding-top: 50px;
@@ -1572,6 +1636,13 @@ JUMBOTRON
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+img.current-show {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 410px;
+  height: auto;
 }
 /**
 
@@ -1582,7 +1653,8 @@ ei jaksa enaa olla jarjestelmallinen
   background: white;
   color: #272e38;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin: 5px;
+  margin: 0px;
+  padding: 10px;
 }
 .box h2 {
   text-align: center;
@@ -1608,11 +1680,7 @@ ei jaksa enaa olla jarjestelmallinen
   transition: all 0.3s;
 }
 .box-list a:hover {
-  background-image: -webkit-linear-gradient(left, #ffffff, #fafafa 50%, #ffffff);
-  background-image: linear-gradient(to right, #ffffff, #fafafa 50%, #ffffff);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=1);
-  background: #acd037;
+  color: #acd037;
 }
 .box-list .fa {
   position: absolute;
@@ -1625,15 +1693,21 @@ ei jaksa enaa olla jarjestelmallinen
 .time-list a {
   display: block;
   width: 100%;
-  padding: 10px 0px;
+  padding: 5px 10px;
   text-decoration: none;
   font-size: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.time-list a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 .time-list a time {
-  display: block;
+  display: inline;
   font-weight: 700;
   text-align: left;
-  color: #0072bc;
+  margin-right: 10px;
+  color: #acd037;
 }
 /* Featurettes
 ------------------------- */
@@ -1653,16 +1727,35 @@ ei jaksa enaa olla jarjestelmallinen
 /* Carousel
 ------------------------- */
 #vertical-sponsors {
+  display: none;
   position: absolute;
   top: 0;
-  right: 10%;
-  height: 487px;
+  right: 5%;
+  height: 486px;
   overflow: hidden;
   background: #FFF;
 }
-.horizontal-sponsors > div {
-  display: inline-block;
-  width: 20%;
+@media (min-width: 992px) {
+  #vertical-sponsors {
+    display: block;
+  }
+}
+#vertical-sponsors .cycle-slide {
+  height: 162px;
+  width: 162px;
+}
+.horizontal-sponsors-wrap {
+  width: 100%;
+  background: white;
+  margin-bottom: 30px;
+}
+.horizontal-sponsors {
+  width: 100% ;
+  background: white;
+}
+.horizontal-sponsors .cycle-slide {
+  width: 162px;
+  height: 162px;
   padding: 0;
   margin: 0;
 }
@@ -1681,4 +1774,68 @@ dt {
 .site-footer {
   background: #1f242c;
   min-height: 80px;
+  margin-bottom: 0 !important;
+}
+@media (min-width: 768px) {
+  .site-footer {
+    margin-bottom: 0;
+  }
+}
+.site-footer a {
+  text-decoration: none;
+}
+.site-footer .row > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .site-footer .row > div > ul {
+    padding-top: 40px;
+  }
+}
+.site-footer .row > div .footer-nav {
+  line-height: 36px;
+}
+@media (min-width: 768px) {
+  .site-footer .row > div .footer-nav {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+  }
+  .site-footer .row > div .footer-nav > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+.social-links .fa-inverse {
+  color: #272e38;
+}
+#back2top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #acd037;
+}
+/* OHJELMA KUVAUKSET
+--------------------- */
+.ohjelma-kuvaus {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ohjelma-kuvaus h2 {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px 15px;
+}
+@media (max-width: 768px) {
+  .ohjelma-kuvaus h2 {
+    margin-top: 0;
+  }
+}
+.bg-primary {
+  background: #acd037;
+  font-weight: bold;
+  padding: 10px 20px;
 }

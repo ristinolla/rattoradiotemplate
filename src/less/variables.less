@@ -1,7 +1,7 @@
 /// Variables
 
 @imgurl: '../img/';
-@headingFamily: "museo-slab", sans-serif;
+@headingFamily: "Open Sans","museo-slab", sans-serif;
 @bodyFamily: 'Open Sans', sans-serif;
 
 // DEfine colors
@@ -22,6 +22,7 @@
 // usage
 
 @bgColor: @darkBlue;
+//@bgColor: @rattoBlue;
 @textcolor: white;
 @whiteBgText: @darkBlue;
 @primaryBtn: @rattoGreen;
@@ -29,9 +30,12 @@
 
 
 .rattoGradient(){
-	#gradient > .horizontal(#225cec,#00fff1, 0%,100%);
+	//#gradient > .horizontal(#3994ea,#7fddd9, 0%,100%);
+  #gradient > .horizontal(#358de1,#68c9c5, 0%,100%);
 }
-
+.rattoGradientInvert(){
+  #gradient > .horizontal(#7fddd9,#3994ea, 0%,100%);
+}
 
 
 

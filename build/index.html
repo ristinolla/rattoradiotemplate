@@ -12,7 +12,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,700" rel="stylesheet" type="text/css">
     <!--script(type="text/javascript",src="//use.typekit.net/vjb1lmb.js")-->
     <!--script(type="text/javascript").
-    try{Typekit.load();}catch(e){}
+    @try{Typekit.load();}catch(e){}
     
     -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
   </head>
   <body>
     <div class="footer-pushssssss"><!-- Fixed navbar -->
-      <div id="main-header" role="navigation" class="navbar navbar-fixed-top down">
+      <div id="n-header" role="navigation" class="navbar navbar-fixed-top down">
         <div class="container">
           <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
@@ -54,31 +54,26 @@
           <div style="bffackground-image: url(img/holders/front-jumbotron.jpg);" class="jumbotron">
             <h1 class="big-logo">Rattoradio</h1>
             <p class="lead"><strong>Nyt soi: </strong><span>Rattoradio</span></p>
-            <p><a href="#" role="button" class="btn btn-lg btn-animated">Kuuntele! <i class="fa fa-volume-up"></i></a><a href="#" role="button" class="btn btn-lg btn-animated">Katsele! <i class="fa fa-video-camera"></i></a></p>
+            <p><a href="#" role="button" class="btn btn-lg btn-animated">Kuuntele! <i class="fa fa-volume-up"></i></a><a href="#" role="button" class="btn btn-lg btn-animated">Katsele! <i class="fa fa-video-camera"></i></a></p><img src="img/paivakahvipojat.png" class="current-show">
           </div>
         </div>
         <div id="vertical-sponsors">
-          <div data-cycle-timeout='1000' data-cycle-carousel-visible='3' data-cycle-carousel-vertical data-cycle-slides="&gt; div" class="list-unstyled vertical-sponsors slideshow">
-                <div><a href="#"><img src="http://placehold.it/162x162/ffaaff/abbeef/" alt=""></a></div>
-                <div><a href="#"><img src="http://placehold.it/162x162/afbafa/abbeef/" alt=""></a></div>
-                <div><a href="#"><img src="http://placehold.it/162x162/bbaaddd/abbeef/" alt=""></a></div>
-                <div><a href="#"><img src="http://placehold.it/162x162/aebbaa/abbeef/" alt=""></a></div>
-                <div><a href="#"><img src="http://placehold.it/162x162/abbabb/abbeef/" alt=""></a></div>
+          <div data-cycle-fx="carousel" data-cycle-timeout='3000' data-cycle-carousel-visible='3' data-cycle-carousel-vertical="true" data-cycle-slides="&gt; div" class="list-unstyled vertical-sponsors slideshow">
+                  <div><a href="#"><img src="http://placehold.it/162x162/ffaaff/abbeef/" alt=""></a></div>
+                  <div><a href="#"><img src="http://placehold.it/162x162/afbafa/abbeef/" alt=""></a></div>
+                  <div><a href="#"><img src="http://placehold.it/162x162/bbaaddd/abbeef/" alt=""></a></div>
+                  <div><a href="#"><img src="http://placehold.it/162x162/aebbaa/abbeef/" alt=""></a></div>
+                  <div><a href="#"><img src="http://placehold.it/162x162/abbabb/abbeef/" alt=""></a></div>
+                  <div><a href="#"><img src="http://placehold.it/162x162/abbabb/abbeef/" alt=""></a></div>
           </div>
         </div>
       </div>
       <div class="container-divider"></div>
-      <!-- div.wide-container
-      div.list-inline.horizontal-sponsors(
-          data-cycle-fx=carousel,
-          data-cycle-timeout=1000
-          )
-      +sponsors(["arkkarit", "uniresta", "jumpru", "tek", "oyy"])
-      -->
-      <!--     -->
-      <div class="container">
+      <!--include includes/horizontal-sponsors.jade-->
+      <div class="container-divider"></div>
+      <div class="container main-content">
         <div class="row featurette">
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-3">
             <div class="box">
               <h2>Yhteys studioon</h2>
               <ul class="box-list list-unstyled">
@@ -90,21 +85,21 @@
               </ul>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-5">
             <h2>Tämän päivän ohjelmisto</h2>
             <ul class="list-unstyled time-list">
               <li><a href="#">
-                  <time>08:00</time><span>Laadukasta paskaa ja kauheasti tekstiä tähän</span></a></li>
+                  <time>00:00 - 00:80</time><span>Laadukasta paskaa ja kauheasti tekstiä tähän</span></a></li>
               <li><a href="#">
-                  <time>08:00</time><span>Laadukasta paskaa                </span></a></li>
+                  <time>08:00 - 11:00</time><span>Laadukasta paskaa                </span></a></li>
               <li><a href="#">
-                  <time>08:00</time><span>Laadukasta paskaa</span></a></li>
+                  <time>11:00 - 12:00</time><span>Laadukasta paskaa</span></a></li>
               <li><a href="#">
-                  <time>08:00</time><span>Laadukasta paskaa</span></a></li>
+                  <time>12:00 - 14:00</time><span>Laadukasta paskaa</span></a></li>
               <li><a href="#">
-                  <time>08:00</time><span>Laadukasta paskaa</span></a></li>
+                  <time>14:00 - 17:00</time><span>Laadukasta paskaa</span></a></li>
               <li><a href="#">
-                  <time>08:00</time><span>Laadukasta paskaa  </span></a></li>
+                  <time>17:00 - 20:00</time><span>Laadukasta paskaa  </span></a></li>
             </ul>
           </div>
           <div class="col-sm-12 col-md-4">
@@ -137,12 +132,26 @@
         </div>
       </div>
     </div>
-    <footer class="container wide-container site-footer">
-      <div class="row">
-        <div class="col-sm-12 col-md-4"><img src="img/rattoradio.png" alt=""></div>
-        <div class="col-sm-12 col-md-6"></div>
+    <footer class="wide-container site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3"><a href="/" class="small-logo">rattoradio</a></div>
+          <div class="col-xs-12 col-sm-6">
+            <ul class="list-unstyled footer-nav">
+              <li><a href="#">Etusivu</a></li>
+              <li><a href="#">Ohjelma</a></li>
+              <li><a href="#">Kuuntele</a></li>
+              <li><a href="#">Kuuntele</a></li>
+            </ul>
+          </div>
+          <div class="col xs-12 col-sm-3">
+            <ul class="list-unstyled social-links">
+              <li><a href="#fabo"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fb-color"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a><a href="#irccijosniihinonlinkkia"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x irc-color"></i><i class="fa fa-terminal fa-stack-1x fa-inverse"></i></span></a><a href="#twittah"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x twitter-color"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a><a href="#instagram"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x insta-color"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </footer>
+    </footer><a id="back2top" href="#top"><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span></a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="../bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>

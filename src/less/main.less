@@ -16,19 +16,24 @@ body, html {
 	margin: 0;
 	background-color: @bgColor;
 	//#gradient > .radial(#272e38, #232830);
-	//background: url('../img/ocean.png') repeat;
+	//.rattoGradient;
+	background: url("@{imgurl}background.jpg"); 
+
 	color: @textcolor;
 	a {
 		color: @textcolor;
 		&:hover {
-			color: lighten(@rattoBlue, 40%)
+			color: lighten(@rattoBlue, 40%);
 		}
 	}
 	font-family: @bodyFamily;
 }
+
 h1,h2,h3,h4,h5 {
-	font-family: @headingFamily
+	font-family: @headingFamily;
+	font-weight: 700;
 }
+
 
 
 body > .footer-push {
@@ -36,6 +41,11 @@ body > .footer-push {
     height: auto !important;
     margin-bottom: -@footerheight;
 }
+
+a:hover .twitter-color { color: #00aced; }
+a:hover .fb-color { color: #3b5998; }
+a:hover .insta-color { color: #517fa4; }
+a:hover .irc-color { color: red; }
 
 
 /**
@@ -55,14 +65,29 @@ LAYOUT
 .container-divider {
 	height: 4px;
 	width: 100%;
-	.rattoGradient();
+	.rattoGradientInvert();
 	border-top: 0;
 	margin-top: 0;
+
 }
 
 @-webkit-keyframes moving-gradient {
     0% { background-position: left bottom; }
     100% { background-position: right bottom; }
+}
+
+.container {
+	
+	@media (min-width:@sm) {
+			margin-bottom: 0px;
+	}
+	.site-footer > & {
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+	&.main-content {
+		margin-top: 40px;
+	}
 }
 
 
@@ -157,6 +182,38 @@ NAV BAR
 }
 
 
+ /**
+ **
+ List- nav
+
+ */
+ h3.list-head {
+ 	color: @rattoGreen;
+ }
+
+ ul.list-nav {
+ 	li {
+		&:first-of-type a {
+				border:none;
+		}
+
+ 		a {
+ 			display: block;
+ 			padding: 5px 15px;
+ 			border-color: gray;
+ 			border-top: 1px solid rgba(255, 255, 255, 0.1);
+ 			//background: rgba(255, 255, 255, 0.02);
+ 			text-decoration: none;
+ 			&:hover {
+				background: rgba(255,255,255,0.2);
+				color: white;
+ 			}
+ 		}
+ 	}
+ }
+
+
+
 /**
 
 BUTTONEEEITa
@@ -215,15 +272,28 @@ JUMBOTRON
 .big-logo {
 	.text-hide();
 	color: rgba(0, 0, 0, 0) !important;
-	width: 300px;
-	height: 227px;
+	width: 531px;
+	height: 226px;
 	display: block;
-	background-image: url("@{imgurl}rattoradio-white.png");
+	background-image: url("@{imgurl}rattoradiomedtaajuus_iso.png");
 	background-repeat: no-repeat;
+}
+
+.small-logo {
+	display: inline-block;
+	.text-hide();
+	height: 100px;
+	width: 219px;
+	color: rgba(0, 0, 0, 0) !important;
+	background-image: url("@{imgurl}rattoradiomedtaajuus.png");
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .jumbotron-wrap {
 	background-color: @rattoBlue;
+	background: url("@{imgurl}hero-bg.jpg");
+	background-size: cover;
 }
 .jumbotron {
 	padding-top: @topNavHeight;
@@ -235,6 +305,13 @@ JUMBOTRON
 	
 }
 
+img.current-show {
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	width: 410px;
+	height: auto;
+}
 .vertical-cycle {
 
 }
@@ -248,6 +325,7 @@ ei jaksa enaa olla jarjestelmallinen
 **/
 
 .box {
+	//background: rgba(255, 255, 255, 0.8);
 	background: white;
 	color: @whiteBgText;
 	//border-radius: 10px;
@@ -261,7 +339,8 @@ ei jaksa enaa olla jarjestelmallinen
 
 	}
 
-	margin: 5px;
+	margin: 0px;
+	padding: 10px;
 }
 .box-list {
 	a {
@@ -276,10 +355,11 @@ ei jaksa enaa olla jarjestelmallinen
 		line-height: 28px;
 		.transition( all  0.3s );
 		&:hover {
-			#gradient > .horizontal-three-colors(white; @mid-color: #fafafa; @color-stop: 50%; @end-color: white);
+			//#gradient > .horizontal-three-colors(white; @mid-color: #fafafa; @color-stop: 50%; @end-color: white);
 			
 			//.rattoGradient()
-			background: @rattoGreen;
+			//background: @rattoGreen;
+			color: @rattoGreen;
 		}
 	}
 	.fa {
@@ -296,15 +376,23 @@ ei jaksa enaa olla jarjestelmallinen
 	a {
 		display: block;
 		width: 100%;
-		padding: 10px 0px;
+		padding: 5px 10px;
 		text-decoration: none;
 		font-size: 16px;
+
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+		&:hover {
+			background: rgba(255,255,255,0.2);
+			color: white;
+ 		}
 		time {
-			display: block;
+			display: inline;
 			font-weight: 700;
 			text-align: left;
+			margin-right: 10px;
 			//.rattoGradient;
-			color: @rattoBlue;
+			color: @rattoGreen;
 		}
 	}
 }
@@ -332,18 +420,33 @@ ei jaksa enaa olla jarjestelmallinen
 ------------------------- */
 
 #vertical-sponsors {
+  display: none;
+	@media (min-width: @md) {
+		display: block;
+	}
   position: absolute;
   top: 0;
-  right: 10%;
-  height: 487px;
+  right: 5%;
+  height: 486px;
+
+  .cycle-slide {
+  	height: 162px;
+  	width: 162px;
+  }
   overflow: hidden;
   background: #FFF;
 }
-
+.horizontal-sponsors-wrap {
+	width: 100%;
+	background: white;
+	margin-bottom: 30px;
+}
 .horizontal-sponsors {
-	> div {
-		display: inline-block;
-		width: 20%;
+	width: 100% ;
+	background: white;
+	.cycle-slide {
+		width: 162px;
+		height: 162px;
 		padding: 0;
 		margin: 0;
 	}
@@ -369,5 +472,75 @@ dt {
 .site-footer {
 	background: darken(@bgColor, 4%);
 	min-height: @footerheight;
+	@media (min-width:@sm) {
+		margin-bottom: 0;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+
+	margin-bottom: 0 !important;
+	.row > div {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center;
+		> ul {
+			@media (min-width:@sm)  {
+				padding-top: 40px;
+			}
+		}
+		.footer-nav {
+			line-height: 36px;
+			@media (min-width:@sm) {
+				padding-left: 0;
+				list-style: none;
+				margin-left: -5px;
+				> li {
+					display: inline-block;
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+				}
+		}
+	}
 }
 
+.social-links {
+	.fa-inverse {
+		color: @darkBlue;
+	}
+} 
+
+#back2top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	color: @rattoGreen;
+}
+
+
+
+/* OHJELMA KUVAUKSET
+--------------------- */
+
+.ohjelma-kuvaus {
+	margin-bottom: 30px;	
+		h2 {
+			@media (max-width: @sm) {
+				margin-top: 0;
+			}
+
+			
+			background: rgba(255, 255, 255, 0.3);
+			padding: 5px 15px;
+
+		}
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);	
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);	
+}
+.bg-primary {
+	background: @rattoGreen;
+	font-weight: bold;
+	padding: 10px 20px;
+}

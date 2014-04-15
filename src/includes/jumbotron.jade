@@ -1,0 +1,29 @@
+mixin sponsors(sponsors)
+  -each sponsor in sponsors
+    div
+      a(href="#")
+        img(src="http://placehold.it/162x162/"+sponsor+"/abbeef/", alt="")
+
+div.wide-container.jumbotron-wrap
+  .container
+    .jumbotron(style="bffackground-image: url(img/holders/front-jumbotron.jpg);")
+      h1.big-logo Rattoradio
+      p.lead
+        strong Nyt soi: 
+        span Rattoradio
+      p
+        a.btn.btn-lg.btn-animated(href="#", role="button") Kuuntele! 
+          i.fa.fa-volume-up
+        a.btn.btn-lg.btn-animated(href="#", role="button") Katsele! 
+          i.fa.fa-video-camera
+      img.current-show(src="img/paivakahvipojat.png")
+
+  #vertical-sponsors
+    div.list-unstyled.vertical-sponsors.slideshow(
+      data-cycle-fx='carousel',
+      data-cycle-timeout=3000,
+      data-cycle-carousel-visible=3,
+      data-cycle-carousel-vertical='true',
+      data-cycle-slides='> div'
+      )
+      +sponsors(["ffaaff", "afbafa", "bbaaddd", "aebbaa", "abbabb","abbabb"])

@@ -76,6 +76,7 @@ module.exports = function(grunt) {
         },
         files: {
           'build/index.html' : 'src/index.jade',
+          'build/alasivu.html' : 'src/alasivu.jade',
           'build/components/head.html' :  'src/includes/head.jade',
           'build/components/main-container.html' : 'src/includes/main-container.jade',
           'build/components/main-nav.html' : 'src/includes/main-nav.jade'

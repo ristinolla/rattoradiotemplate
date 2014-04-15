@@ -42,6 +42,7 @@ Vesion: 0.1.2
 }(jQuery);;$(function() {
 $('html').removeClass('no-js');
     
+    $('.slideshow').cycle();
     //code here
     setTimeout(function() {
     	$('#test').addClass('now');
