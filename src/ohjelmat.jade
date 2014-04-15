@@ -38,9 +38,10 @@ html(lang="en")
       .container.main-content
         .row
           .col-xs-12.col-sm-3
-            h3.list-head Ohjelmaesittelyt
-            ul.list-unstyled.list-nav
-              +ohjelmalista(kaikkiohjelmat)
+            #sticky-nav(data-spy="affix",data-offset-top="550",data-offset-bottom="220")
+              h3.list-head Ohjelmaesittelyt
+              ul.list-unstyled.list-nav
+                +ohjelmalista(kaikkiohjelmat)
 
             //include includes/yhteys-box.jade
           .col-xs-12.col-sm-9

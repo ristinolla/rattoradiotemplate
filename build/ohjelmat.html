@@ -25,16 +25,17 @@
   <!--mixin ohjelma kuvauksille-->
   <body>
     <div class="footer-pushssssss"><!-- Fixed navbar -->
-      <div id="n-header" role="navigation" class="navbar navbar-fixed-top down">
+      <div id="main-header" role="navigation" class="navbar navbar-fixed-top down">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#top" class="navbar-brand visible-xs">Rattoradio</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-center">
-              <li class="active"><a href="#">Etusivu</a></li>
-              <li><a href="#about">Yhteys studioon</a></li>
-              <li><a href="#about">Ohelmakartta</a></li>
+              <li class="active"><a href="index.html">Etusivu</a></li>
+              <li><a href="ohjelmat.html">Ohjelmat</a></li>
+              <li><a href="ohjelmakartta.html">Ohelmakartta</a></li>
+              <li><a href="alasivu.html">Alasivu</a></li>
               <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Action</a></li>
@@ -61,12 +62,10 @@
         </div>
         <div id="vertical-sponsors">
           <div data-cycle-fx="carousel" data-cycle-timeout='3000' data-cycle-carousel-visible='3' data-cycle-carousel-vertical="true" data-cycle-slides="&gt; div" class="list-unstyled vertical-sponsors slideshow">
-                  <div><a href="#"><img src="http://placehold.it/162x162/ffaaff/abbeef/" alt=""></a></div>
-                  <div><a href="#"><img src="http://placehold.it/162x162/afbafa/abbeef/" alt=""></a></div>
-                  <div><a href="#"><img src="http://placehold.it/162x162/bbaaddd/abbeef/" alt=""></a></div>
-                  <div><a href="#"><img src="http://placehold.it/162x162/aebbaa/abbeef/" alt=""></a></div>
-                  <div><a href="#"><img src="http://placehold.it/162x162/abbabb/abbeef/" alt=""></a></div>
-                  <div><a href="#"><img src="http://placehold.it/162x162/abbabb/abbeef/" alt=""></a></div>
+                  <div><a href="#" style="background-image: url(img/sponssit/uniresta.png)">sponsor</a></div>
+                  <div><a href="#" style="background-image: url(img/sponssit/oyy.png)">sponsor</a></div>
+                  <div><a href="#" style="background-image: url(img/sponssit/tek.png)">sponsor</a></div>
+                  <div><a href="#" style="background-image: url(img/sponssit/jumpru.png)">sponsor</a></div>
           </div>
         </div>
       </div>
@@ -76,27 +75,29 @@
       <div class="container main-content">
         <div class="row">
           <div class="col-xs-12 col-sm-3">
-            <h3 class="list-head">Ohjelmaesittelyt</h3>
-            <ul class="list-unstyled list-nav">
-                <li><a href="#VPJt ulalla">VPJt ulalla</a></li>
-                <li><a href="#Wesilinjalla">Wesilinjalla</a></li>
-                <li><a href="#Souvvi">Souvvi</a></li>
-                <li><a href="#Päiväkahvipojat">Päiväkahvipojat</a></li>
-                <li><a href="#Pauli ja Vesku paksuna">Pauli ja Vesku paksuna</a></li>
-                <li><a href="#Orava">Orava</a></li>
-                <li><a href="#Joonaksen Lounashölinää">Joonaksen Lounashölinää</a></li>
-                <li><a href="#In your mama's house">In your mama's house</a></li>
-                <li><a href="#Nolona!">Nolona!</a></li>
-                <li><a href="#Allianssin aamu">Allianssin aamu</a></li>
-                <li><a href="#AamuRatto">AamuRatto</a></li>
-                <li><a href="#Tyttöjen ilta">Tyttöjen ilta</a></li>
-                <li><a href="#Oulu vs. Tampere">Oulu vs. Tampere</a></li>
-                <li><a href="#BDS-M">BDS-M</a></li>
-                <li><a href="#Kuolleen Musiikin Yö">Kuolleen Musiikin Yö</a></li>
-                <li><a href="#Tähdellistä asiaa">Tähdellistä asiaa</a></li>
-                <li><a href="#Yömasennus">Yömasennus</a></li>
-                <li><a href="#Kohuradio">Kohuradio</a></li>
-            </ul>
+            <div id="sticky-nav" data-spy="affix" data-offset-top="550" data-offset-bottom="220">
+              <h3 class="list-head">Ohjelmaesittelyt</h3>
+              <ul class="list-unstyled list-nav">
+                  <li><a href="#VPJt ulalla">VPJt ulalla</a></li>
+                  <li><a href="#Wesilinjalla">Wesilinjalla</a></li>
+                  <li><a href="#Souvvi">Souvvi</a></li>
+                  <li><a href="#Päiväkahvipojat">Päiväkahvipojat</a></li>
+                  <li><a href="#Pauli ja Vesku paksuna">Pauli ja Vesku paksuna</a></li>
+                  <li><a href="#Orava">Orava</a></li>
+                  <li><a href="#Joonaksen Lounashölinää">Joonaksen Lounashölinää</a></li>
+                  <li><a href="#In your mama's house">In your mama's house</a></li>
+                  <li><a href="#Nolona!">Nolona!</a></li>
+                  <li><a href="#Allianssin aamu">Allianssin aamu</a></li>
+                  <li><a href="#AamuRatto">AamuRatto</a></li>
+                  <li><a href="#Tyttöjen ilta">Tyttöjen ilta</a></li>
+                  <li><a href="#Oulu vs. Tampere">Oulu vs. Tampere</a></li>
+                  <li><a href="#BDS-M">BDS-M</a></li>
+                  <li><a href="#Kuolleen Musiikin Yö">Kuolleen Musiikin Yö</a></li>
+                  <li><a href="#Tähdellistä asiaa">Tähdellistä asiaa</a></li>
+                  <li><a href="#Yömasennus">Yömasennus</a></li>
+                  <li><a href="#Kohuradio">Kohuradio</a></li>
+              </ul>
+            </div>
             <!--include includes/yhteys-box.jade-->
           </div>
           <div class="col-xs-12 col-sm-9">
@@ -268,10 +269,18 @@
         </div>
       </div>
     </footer><a id="back2top" href="#top"><span class="fa-stack fa-lg"><i class="fa fa-square fa-stack-2x"></i><i class="fa fa-angle-up fa-stack-1x fa-inverse"></i></span></a>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="../bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
-    <script src="../bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js"></script>
-    <script src="js/rattoradio.js"></script>
+    <!--script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")-->
+    <!--script(src="js/bootstrap.min.js")-->
+    <!--script(src="../bower_components/jquery-cycle2/build/jquery.cycle2.min.js")-->
+    <!--script(src="../bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js")-->
+    <script src="js/rattoradio.libs.js"></script>
+    <script src="js/rattoradio.min.js"></script>  <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>    
   </body>
 </html>

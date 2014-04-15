@@ -1,8 +1,9 @@
+include variables
+
 mixin sponsors(sponsors)
   -each sponsor in sponsors
     div
-      a(href="#")
-        img(src="http://placehold.it/162x162/"+sponsor+"/abbeef/", alt="")
+      a(href="#", style="background-image: url(img/sponssit/"+sponsor+".png)") sponsor
 
 div.wide-container.jumbotron-wrap
   .container
@@ -26,4 +27,4 @@ div.wide-container.jumbotron-wrap
       data-cycle-carousel-vertical='true',
       data-cycle-slides='> div'
       )
-      +sponsors(["ffaaff", "afbafa", "bbaaddd", "aebbaa", "abbabb","abbabb"])
+      +sponsors(sponssit)

@@ -1,3 +1,4 @@
+include variables
 footer.wide-container.site-footer
   div.container
     .row
@@ -42,9 +43,19 @@ a#back2top(href="#top")
 
 
 
-script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
-script(src="js/bootstrap.min.js")
-script(src="../bower_components/jquery-cycle2/build/jquery.cycle2.min.js")
-script(src="../bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js")
+//script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+//script(src="js/bootstrap.min.js")
+//script(src="../bower_components/jquery-cycle2/build/jquery.cycle2.min.js")
+//script(src="../bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js")
 
-script(src="js/rattoradio.js")
+script(src="js/rattoradio.libs.js")
+script(src="js/rattoradio.min.js")
+
+|   <div id="fb-root"></div>
+|   <script>(function(d, s, id) {
+|     var js, fjs = d.getElementsByTagName(s)[0];
+|     if (d.getElementById(id)) return;
+|     js = d.createElement(s); js.id = id;
+|     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+|     fjs.parentNode.insertBefore(js, fjs);
+|   }(document, 'script', 'facebook-jssdk'));</script>    

@@ -16,7 +16,11 @@ module.exports = function(grunt) {
         dest: 'build/js/<%= pkg.name %>.js'
       },
       libs: {
-        src: ['bower_components/jquery/dist/jquery.js', 'bower_components/jquery-cycle2/build/jquery.cycle2.js', 'bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js', 'bower_components/bootstrap/dist/js/bootstrap.js'],
+        src: ['bower_components/jquery/dist/jquery.js', 
+        'bower_components/jquery-cycle2/build/jquery.cycle2.js', 
+        'bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js', 
+        'bower_components/bootstrap/dist/js/bootstrap.js', 
+        'bower_components/retina.js/dist/retina.js'],
         dest: 'build/js/<%= pkg.name %>.libs.js'
       }
     },
@@ -77,9 +81,13 @@ module.exports = function(grunt) {
         files: {
           'build/index.html' : 'src/index.jade',
           'build/alasivu.html' : 'src/alasivu.jade',
+          'build/ohjelmat.html' : 'src/ohjelmat.jade',
+          'build/ohjelmakartta.html' : 'src/ohjelmakartta.jade',
           'build/components/head.html' :  'src/includes/head.jade',
           'build/components/main-container.html' : 'src/includes/main-container.jade',
-          'build/components/main-nav.html' : 'src/includes/main-nav.jade'
+          'build/components/main-nav.html' : 'src/includes/main-nav.jade',
+          'build/components/social-container.html' : 'src/includes/social-container.jade',
+          'build/components/jumbotron.html' : 'src/includes/jumbotron.jade'
         }
 
       } 

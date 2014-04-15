@@ -1,15 +1,14 @@
+include variables
 mixin sponsors(sponsors)
   -each sponsor in sponsors
-    div
-      a(href="#")
-        img(src="http://placehold.it/162x162/"+sponsor+"/abbeef/", alt="")
-
+    div.slide
+      a(href="#", style="background-image: url(img/sponssit/"+sponsor+".png)") sponsor
 div.wide-container
   div.horizontal-sponsors-wrap
-    div.horizontal-sponsors.slideshow(
+    div.horizontal-sponsors(
       data-cycle-fx='carousel',
       data-cycle-timeout=3000,
-      data-cycle-carousel-visible=5,
+      data-cycle-carousel-visible=4,
       data-cycle-slides='> div'
       )
-      +sponsors(["ffaaff", "afbafa", "bbaaddd", "aebbaa", "abbabb",'abababa'])   
+      +sponsors(sponssit)   

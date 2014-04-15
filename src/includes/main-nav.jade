@@ -1,6 +1,6 @@
-
+include variables
 <!-- Fixed navbar -->
-#n-header.navbar.navbar-fixed-top.down(role="navigation")
+#main-header.navbar.navbar-fixed-top.down(role="navigation")
   .container
     .navbar-header
       button.navbar-toggle(type="button",data-toggle="collapse",data-target=".navbar-collapse")
@@ -8,14 +8,18 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
+      a.navbar-brand.visible-xs(href="#top") Rattoradio
+    
     .navbar-collapse.collapse
       ul.nav.navbar-nav.navbar-center
         li.active
-          a(href="#") Etusivu
+          a(href="index.html") Etusivu
         li
-          a(href="#about") Yhteys studioon
+          a(href="ohjelmat.html") Ohjelmat
         li
-          a(href="#about") Ohelmakartta
+          a(href="ohjelmakartta.html") Ohelmakartta
+        li
+          a(href="alasivu.html") Alasivu
         li.dropdown
           a.dropdown-toggle(href="#", data-toggle="dropdown") Dropdown
             b.caret

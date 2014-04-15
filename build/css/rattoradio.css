@@ -1432,6 +1432,7 @@ LAYOUT
 }
 .container.main-content {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 .content-row {
   padding: 40px 0;
@@ -1540,7 +1541,7 @@ ul.list-nav li:first-of-type a {
 }
 ul.list-nav li a {
   display: block;
-  padding: 5px 15px;
+  padding: 2px 15px;
   border-color: gray;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
@@ -1548,6 +1549,14 @@ ul.list-nav li a {
 ul.list-nav li a:hover {
   background: rgba(255, 255, 255, 0.2);
   color: white;
+}
+.sticky-nav.affix {
+  top: 60px;
+}
+.sticky-nav.affix-bottom {
+  top: auto !important;
+  position: fixed;
+  bottom: 195px;
 }
 /**
 
@@ -1603,12 +1612,32 @@ JUMBOTRON
   text-shadow: none;
   background-color: transparent;
   border: 0;
+  opacity: 0;
   color: rgba(0, 0, 0, 0) !important;
-  width: 531px;
-  height: 226px;
+  width: auto;
+  height: 100px;
   display: block;
   background-image: url("../img/rattoradiomedtaajuus_iso.png");
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .big-logo {
+    opacity: 1;
+    height: 146px;
+    background-position: 0 0 ;
+  }
+}
+@media (min-width: 992px) {
+  .big-logo {
+    height: 175px;
+  }
+}
+@media (min-width: 1200px) {
+  .big-logo {
+    height: 226px;
+  }
 }
 .small-logo {
   display: inline-block;
@@ -1624,6 +1653,20 @@ JUMBOTRON
   background-repeat: no-repeat;
   background-size: contain;
 }
+.navbar-brand {
+  display: inline-block;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/rattoradiomedtaajuus.png");
+  height: 40px;
+  width: 103px;
+  background-size: contain;
+  margin: 5px 5px;
+}
 .jumbotron-wrap {
   background-color: #0072bc;
   background: url("../img/hero-bg.jpg");
@@ -1636,13 +1679,56 @@ JUMBOTRON
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .jumbotron {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .jumbotron .btn-animated {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+.jumbotron p {
+  z-index: 200;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .jumbotron p.lead {
+    font-size: 16px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
 }
 img.current-show {
   position: absolute;
-  bottom: -30px;
+  bottom: -10px;
+  width: 300px;
   left: 50%;
-  width: 410px;
+  margin-left: -150px;
   height: auto;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  img.current-show {
+    display: block;
+    bottom: -30px;
+    left: 400px;
+    width: 360px;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  img.current-show {
+    left: 560px;
+    width: 410px;
+  }
 }
 /**
 
@@ -1666,7 +1752,8 @@ ei jaksa enaa olla jarjestelmallinen
 .box a:visited {
   color: #343434;
 }
-.box-list a {
+.box-list a,
+.box-list span {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -1679,7 +1766,8 @@ ei jaksa enaa olla jarjestelmallinen
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.box-list a:hover {
+.box-list a:hover,
+.box-list span:hover {
   color: #acd037;
 }
 .box-list .fa {
@@ -1731,33 +1819,76 @@ ei jaksa enaa olla jarjestelmallinen
   position: absolute;
   top: 0;
   right: 5%;
-  height: 486px;
   overflow: hidden;
   background: #FFF;
 }
 @media (min-width: 992px) {
   #vertical-sponsors {
     display: block;
+    height: 435px;
+    padding: 0 10px;
+  }
+  #vertical-sponsors .cycle-slide,
+  #vertical-sponsors .cycle-slide a {
+    height: 145px;
+    width: 145px;
   }
 }
-#vertical-sponsors .cycle-slide {
-  height: 162px;
-  width: 162px;
+@media (min-width: 1200px) {
+  #vertical-sponsors {
+    height: 486px;
+  }
+  #vertical-sponsors .cycle-slide,
+  #vertical-sponsors .cycle-slide a {
+    height: 162px;
+    width: 162px;
+  }
+}
+#vertical-sponsors .cycle-slide a {
+  display: inline-block;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .horizontal-sponsors-wrap {
   width: 100%;
   background: white;
-  margin-bottom: 30px;
 }
 .horizontal-sponsors {
   width: 100% ;
-  background: white;
+  display: none;
 }
-.horizontal-sponsors .cycle-slide {
-  width: 162px;
-  height: 162px;
+@media (min-width: 992px) {
+  .horizontal-sponsors {
+    display: none;
+  }
+}
+.horizontal-sponsors .slide {
+  height: 100px;
+  text-align: center;
   padding: 0;
   margin: 0;
+}
+.horizontal-sponsors .slide a {
+  display: inline-block;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .horizontal-sponsors .slide {
+    height: 162px;
+  }
 }
 .horizontal-sponsors a {
   display: inline-block;
@@ -1838,4 +1969,18 @@ dt {
   background: #acd037;
   font-weight: bold;
   padding: 10px 20px;
+}
+.social-wrap {
+  background: white;
+  padding: 10px;
+}
+.social-wrap h3 {
+  margin: 10px 10px 20px;
+  color: #0072bc;
+}
+.social-wrap h3 .fa {
+  color: #acd037;
+}
+.social-wrap h3 span {
+  padding-left: 10px;
 }
