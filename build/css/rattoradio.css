@@ -1356,9 +1356,15 @@ html {
   padding: 0;
   margin: 0;
   background-color: #272e38;
-  background: url("../img/background.jpg");
+  background: url("../img/background_mobile.jpg");
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 768px) {
+  body,
+  html {
+    background: url("../img/background.jpg");
+  }
 }
 body a,
 html a {
@@ -1669,8 +1675,13 @@ JUMBOTRON
 }
 .jumbotron-wrap {
   background-color: #0072bc;
-  background: url("../img/hero-bg.jpg");
+  background-image: url("../img/hero-bg_mobile.jpg");
   background-size: cover;
+}
+@media (min-width: 768px) {
+  .jumbotron-wrap {
+    background-image: url("../img/hero-bg.jpg");
+  }
 }
 .jumbotron {
   padding-top: 50px;

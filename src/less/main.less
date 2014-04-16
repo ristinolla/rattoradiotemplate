@@ -17,8 +17,10 @@ body, html {
 	background-color: @bgColor;
 	//#gradient > .radial(#272e38, #232830);
 	//.rattoGradient;
-	background: url("@{imgurl}background.jpg"); 
-
+	background: url("@{imgurl}background_mobile.jpg");
+	@media (min-width: @sm) {
+		background: url("@{imgurl}background.jpg"); 
+	}
 	color: @textcolor;
 	a {
 		color: @textcolor;
@@ -329,8 +331,12 @@ JUMBOTRON
 
 .jumbotron-wrap {
 	background-color: @rattoBlue;
-	background: url("@{imgurl}hero-bg.jpg");
+	background-image: url("@{imgurl}hero-bg_mobile.jpg");
 	background-size: cover;
+	@media (min-width: @sm) {
+		background-image: url("@{imgurl}hero-bg.jpg");
+	}
+	
 }
 .jumbotron {
 	padding-top: @topNavHeight;
