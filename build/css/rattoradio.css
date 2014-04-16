@@ -1689,6 +1689,16 @@ JUMBOTRON
     padding-top: 50px;
   }
 }
+@media (min-width: 992px) {
+  .jumbotron {
+    height: 405px;
+  }
+}
+@media (min-width: 1200px) {
+  .jumbotron {
+    height: 456px;
+  }
+}
 @media (max-width: 768px) {
   .jumbotron .btn-animated {
     padding: 10px;
@@ -1778,24 +1788,34 @@ ei jaksa enaa olla jarjestelmallinen
   font-size: 24px;
   color: #0072bc;
 }
-.time-list a {
+.time-list a,
+.time-list li > span {
   display: block;
   width: 100%;
-  padding: 5px 0px;
+  padding: 5px 0px 5px 105px;
   text-decoration: none;
   font-size: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.time-list a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-.time-list a time {
-  display: inline;
+.time-list a time.time,
+.time-list li > span time.time {
+  display: inline-block;
   font-weight: 700;
   text-align: left;
   margin-right: 10px;
   color: #acd037;
+  margin-left: -104px;
+}
+.time-list a time.date,
+.time-list li > span time.date {
+  margin-left: -104px;
+  display: block;
+  font-weight: bold;
+  color: white;
+}
+.time-list a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 /* Featurettes
 ------------------------- */
@@ -1951,7 +1971,7 @@ dt {
   color: #272e38;
 }
 #back2top {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   color: #acd037;

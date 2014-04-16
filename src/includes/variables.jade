@@ -5,10 +5,10 @@
 
 -var paivat_simple = [ "day1", "day2", "day3", "day4", "day5", "day6", "day7", "day8" ]
 
--var paivaohjelma = [{"time": "00:00 - 00:80", "name": "Laadukasta paskaa"}, {"time": "08:00 - 11:00", "name": "Laadukasta paskaa"},                 {"time": "11:00 - 12:00", "name": "Laadukasta paskaa"}, {"time": "12:00 - 14:00", "name": "Laadukasta paskaa"},  {"time": "14:00 - 17:00", "name": "Laadukasta paskaa"},  {"time": "17:00 - 20:00", "name": "Laadukasta paskaa"}, {"time": "17:00 - 20:00", "name": "Laadukasta paskaa"}]   
+-var paivaohjelma = [{"time": "00:00 - 00:80", "name": "Laadukasta paskaa"}, {"time": "08:00 - 11:00", "name": "Laadukasta paskaa"},                 {"time": "11:00 - 12:00", "name": "Laadukasta paskaa ja paljon kaikkea turhaa tekstiä että varmasti devaajaa vituttaa"}, {"time": "12:00 - 14:00", "name": "Laadukasta paskaa"},  {"time": "14:00 - 17:00", "name": "Laadukasta paskaa"},  {"time": "17:00 - 20:00", "name": "Laadukasta paskaa"}, {"time": "17:00 - 20:00", "name": "Laadukasta paskaa"}]   
 
 
-//mixin ohjelma listalle
+//- mixin ohjelma listalle
 mixin ohjelmalista(ohjelmat)
   -each ohjelma in ohjelmat
     li
@@ -19,7 +19,7 @@ mixin sponsors(sponsors)
     div.slide
       a(href="#", style="background-image: url(img/sponssit/"+sponsor+".png)") sponsor
 
-//mixin ohjelma listalle
+//- mixin ohjelma listalle
 mixin ohjelmakartta_mobile(paivat)
   -each paiva in paivat
     .panel
@@ -39,11 +39,30 @@ mixin ohjelmakartta_mobile(paivat)
 
 
 
-//paivaojjelma
+//- paivaojjelma
 mixin paivaohjelmat(paivaohjelma)
   ul.list-unstyled.time-list
+    li
+      span 
+        time.date 24.4. Keskiviikko
+        time.time 08:00 - 10:00
+        span ohjelman nimi
     -each ohjelma in paivaohjelma
       li
         a(href="#")
-          time= ohjelma.time
+          time.time= ohjelma.time
           span= ohjelma.name
+
+
+//- mixin ohjelma kuvauksille
+mixin ohjelmainsertti(ohjelmat)
+  -each ohjelma in ohjelmat
+    .row.ohjelma-kuvaus
+      .col-xs-12.col-sm-5(id=ohjelma)
+        img(src="img/paivakahvipojat.png", alt="")
+      .col-xs-12.col-sm-7
+        h2=ohjelma
+        p Mörrimöykyt ylös ojista ja radiopäätteen ääreen! On aika päiväkahvien! Wapun syväluotaavin ohjelma pureutuu päivän uutisiin tai yleismaailmallisiin pohdintoihin vähemmän vakavalla otteella. Jokaisella päivällä on myös jokin oma ylevä teemansa.
+        p.bg-primary
+          strong On air:
+          span Joka päivä klo 12-14

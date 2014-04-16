@@ -4,18 +4,6 @@ html(lang="en")
   
 
 
-  //mixin ohjelma kuvauksille
-  mixin ohjelmainsertti(ohjelmat)
-    -each ohjelma in ohjelmat
-      .row.ohjelma-kuvaus(id=ohjelma)
-        .col-xs-12.col-sm-5
-          img(src="img/paivakahvipojat.png", alt="")
-        .col-xs-12.col-sm-7
-          h2=ohjelma
-          p Mörrimöykyt ylös ojista ja radiopäätteen ääreen! On aika päiväkahvien! Wapun syväluotaavin ohjelma pureutuu päivän uutisiin tai yleismaailmallisiin pohdintoihin vähemmän vakavalla otteella. Jokaisella päivällä on myös jokin oma ylevä teemansa.
-          p.bg-primary
-            strong On air:
-            span Joka päivä klo 12-14
 
   body
 
@@ -34,7 +22,11 @@ html(lang="en")
       .container.main-content
         .row
           .col-xs-12.col-sm-3
-            .sticky-nav(data-spy="affix",data-offset-top="550",data-offset-bottom="220")
+            .sticky-nav.mobile.hidden-md.hidden-lg
+              h3.list-head Ohjelmaesittelyt
+              ul.list-unstyled.list-nav
+                +ohjelmalista(kaikkiohjelmat)
+            #affix-menu.sticky-nav.desktop.hidden-xs.hidden-sm
               h3.list-head Ohjelmaesittelyt
               ul.list-unstyled.list-nav
                 +ohjelmalista(kaikkiohjelmat)

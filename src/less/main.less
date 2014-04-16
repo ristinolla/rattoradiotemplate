@@ -347,6 +347,16 @@ JUMBOTRON
 		padding: 10px;
 		padding-top: @topNavHeight;
 	}
+
+	@media (min-width: @md) {
+		height: 405px;
+	}
+
+ 	@media (min-width: @lg) {
+ 		height: 456px;
+ 		
+ 	}
+
 	.btn-animated {
 		@media (max-width:@sm) {
 			padding: 10px;
@@ -451,28 +461,35 @@ ei jaksa enaa olla jarjestelmallinen
 }
 
 .time-list {
-	a {
+	a, li > span {
 		display: block;
 		width: 100%;
-		padding: 5px 0px;
+		padding: 5px 0px 5px 105px;
 		text-decoration: none;
 		font-size: 16px;
 
 		border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-		&:hover {
-			background: rgba(255,255,255,0.2);
-			color: white;
- 		}
-		time {
-			display: inline;
+		time.time {
+			display: inline-block;
 			font-weight: 700;
 			text-align: left;
 			margin-right: 10px;
 			//.rattoGradient;
 			color: @rattoGreen;
+			margin-left: -104px;
+		}
+		time.date {
+			margin-left: -104px;
+			display: block;	
+			font-weight: bold;
+			color: white;
 		}
 	}
+	a:hover {
+		background: rgba(255,255,255,0.2);
+		color: white;
+ 	}
 }
 
 /* Featurettes
@@ -631,7 +648,7 @@ dt {
 } 
 
 #back2top {
-	position: absolute;
+	position: fixed;
 	bottom: 20px;
 	right: 20px;
 	color: @rattoGreen;
