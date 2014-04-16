@@ -59,6 +59,8 @@ $('html').removeClass('no-js');
     });
 
 
+    $('#irclink').tooltip();
+
 
 
 
