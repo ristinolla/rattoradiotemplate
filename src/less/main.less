@@ -23,7 +23,7 @@ body, html {
 	a {
 		color: @textcolor;
 		&:hover {
-			color: lighten(@rattoBlue, 40%);
+			color: l@rattoGreen;
 		}
 	}
 	font-family: @bodyFamily;
@@ -600,10 +600,19 @@ ei jaksa enaa olla jarjestelmallinen
 /* News
 ----*/
 
-dt {
+
+dt, dt a {
 	color: @rattoGreen;
 	font-size: 16px;
+	time {
+		color: white;
+		font-size: 12px;
+		line-height: 13px;
+		font-weight: bold;
+	}
 }
+
+
 
 
 

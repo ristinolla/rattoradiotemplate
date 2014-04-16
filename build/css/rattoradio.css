@@ -1366,7 +1366,7 @@ html a {
 }
 body a:hover,
 html a:hover {
-  color: #89d1ff;
+  color: l #acd037;
 }
 h1,
 h2,
@@ -1925,9 +1925,17 @@ ei jaksa enaa olla jarjestelmallinen
 }
 /* News
 ----*/
-dt {
+dt,
+dt a {
   color: #acd037;
   font-size: 16px;
+}
+dt time,
+dt a time {
+  color: white;
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: bold;
 }
 /* Footer
 ------------------------- */
