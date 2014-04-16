@@ -87,7 +87,8 @@ module.exports = function(grunt) {
           'build/components/main-container.html' : 'src/includes/main-container.jade',
           'build/components/main-nav.html' : 'src/includes/main-nav.jade',
           'build/components/social-container.html' : 'src/includes/social-container.jade',
-          'build/components/jumbotron.html' : 'src/includes/jumbotron.jade'
+          'build/components/jumbotron.html' : 'src/includes/jumbotron.jade',
+          'build/components/jumbotron.html' : 'src/includes/jumbotron_beforewappu.jade'
         }
 
       } 
