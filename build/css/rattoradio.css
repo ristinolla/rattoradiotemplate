@@ -1687,6 +1687,12 @@ JUMBOTRON
     text-align: center;
     padding: 10px;
     padding-top: 50px;
+    min-height: 330px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .jumbotron {
+    min-height: 410px;
   }
 }
 @media (min-width: 992px) {
@@ -1725,6 +1731,17 @@ img.current-show {
   height: auto;
   z-index: 100;
 }
+@media (max-width: 768px) {
+  img.current-show.big-photo {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    left: 0;
+    height: auto;
+    z-index: 100;
+    margin: 0;
+  }
+}
 @media (min-width: 768px) {
   img.current-show {
     display: block;
@@ -1733,11 +1750,19 @@ img.current-show {
     width: 360px;
     margin-left: 0;
   }
+  img.current-show.big-photo {
+    left: 80px;
+    width: 670px;
+  }
 }
 @media (min-width: 1200px) {
   img.current-show {
     left: 560px;
     width: 410px;
+  }
+  img.current-show.big-photo {
+    left: 80px;
+    width: 740px;
   }
 }
 /**

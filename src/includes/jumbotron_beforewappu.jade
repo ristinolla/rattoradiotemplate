@@ -1,0 +1,15 @@
+div.wide-container.jumbotron-wrap
+  .container
+    .jumbotron(style="bffackground-image: url(img/holders/front-jumbotron.jpg);")
+      h1.big-logo Rattoradio
+      img.current-show.big-photo(src="img/rattoradiofolks.png")
+
+  #vertical-sponsors
+    div.list-unstyled.vertical-sponsors.slideshow(
+      data-cycle-fx='carousel',
+      data-cycle-timeout=3000,
+      data-cycle-carousel-visible=3,
+      data-cycle-carousel-vertical='true',
+      data-cycle-slides='> div'
+      )
+      +sponsors(sponssit)
