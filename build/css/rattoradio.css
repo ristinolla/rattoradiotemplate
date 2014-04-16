@@ -1551,7 +1551,7 @@ ul.list-nav li a:hover {
   color: white;
 }
 .sticky-nav.affix {
-  top: 60px;
+  top: 10px;
 }
 .sticky-nav.affix-bottom {
   top: auto !important;
@@ -1852,6 +1852,7 @@ ei jaksa enaa olla jarjestelmallinen
   #vertical-sponsors .cycle-slide a {
     height: 145px;
     width: 145px;
+    background-size: auto 145px;
   }
 }
 @media (min-width: 1200px) {
@@ -1862,6 +1863,7 @@ ei jaksa enaa olla jarjestelmallinen
   #vertical-sponsors .cycle-slide a {
     height: 162px;
     width: 162px;
+    background-size: auto 162px;
   }
 }
 #vertical-sponsors .cycle-slide a {
@@ -1901,6 +1903,7 @@ ei jaksa enaa olla jarjestelmallinen
   text-shadow: none;
   background-color: transparent;
   border: 0;
+  line-height: 30px;
   background-repeat: no-repeat;
   background-position: center center;
   height: 100%;
@@ -1908,7 +1911,7 @@ ei jaksa enaa olla jarjestelmallinen
 }
 @media (max-width: 768px) {
   .horizontal-sponsors .slide a {
-    background-size: contain;
+    background-size: auto 102px;
   }
 }
 @media (min-width: 768px) {

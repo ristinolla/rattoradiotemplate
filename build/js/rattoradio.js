@@ -22,7 +22,7 @@ Vesion: 0.1.2
 	    var st = $(this).scrollTop();
 	    //hide_scroll_guide(st);
 	    
-	    if(st < 600) {
+	    if(st > 600) {
 
 	 		if (st > lastScrollTop){
 	 			$('#main-header').addClass('up').removeClass('down');

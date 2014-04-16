@@ -215,7 +215,7 @@ NAV BAR
 
 .sticky-nav {
 		&.affix {
-			top: @topNavHeight + 10px;
+			top: 10px;
 		}
 		&.affix-bottom {
 			top: auto !important;
@@ -523,6 +523,7 @@ ei jaksa enaa olla jarjestelmallinen
 		.cycle-slide, .cycle-slide a {
   		height: 145px;
   		width: 145px;
+  		background-size: auto 145px;
   	}
 	}
 
@@ -531,6 +532,7 @@ ei jaksa enaa olla jarjestelmallinen
 		.cycle-slide, .cycle-slide a {
   		height: 162px;
   		width: 162px;
+			background-size: auto 162px;
   	}
 	}
   position: absolute;
@@ -566,17 +568,22 @@ ei jaksa enaa olla jarjestelmallinen
 		a {
 			display: inline-block;
 			.text-hide();
+			line-height: 30px;
 			background-repeat: no-repeat;
 			background-position: center center;
 			height: 100%;
 			width: 100%;
 			@media (max-width: @sm) {
-				background-size: contain;
+			
+				background-size: auto 102px;
+			
 			}
+			
 
 		}
 		@media (min-width: @sm) {
 			height: 162px;
+
 		}
 
 
