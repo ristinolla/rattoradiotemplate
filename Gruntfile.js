@@ -19,7 +19,8 @@ module.exports = function(grunt) {
         src: ['bower_components/jquery/dist/jquery.js', 
         'bower_components/jquery-cycle2/build/jquery.cycle2.js', 
         'bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js', 
-        'bower_components/bootstrap/dist/js/bootstrap.js', 
+        'bower_components/bootstrap/dist/js/bootstrap.js',
+        'bower_components/lightbox/js/lightbox.js', 
         'bower_components/retina.js/dist/retina.js'],
         dest: 'build/js/<%= pkg.name %>.libs.js'
       }
@@ -61,6 +62,13 @@ module.exports = function(grunt) {
     },
     
     cssmin: {
+      combine: {
+        files: {
+          'build/css/<%= pkg.ame %>.libs.css': ['bower_components/dist/css/bootstrap.css',
+                                                  'bower_components/css/lightbox.css', 
+                                                  'bower_components/css/screen.css']
+        }
+      },
       minify: {
         expand: true,
         cwd: 'build/css/',
@@ -98,7 +106,7 @@ module.exports = function(grunt) {
       styles: {
         // Which files to watch (all .less files recursively in the less directory)
         files: ['src/less/**/*.less'],
-        tasks: ['less'],
+        tasks: ['less','cssmin'],
         options: {
           nospawn: true
         }
@@ -129,6 +137,6 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['concat','uglify','jade','watch']);
+  grunt.registerTask('default', ['concat','cssmin','uglify','jade','watch' ]);
 
 };
